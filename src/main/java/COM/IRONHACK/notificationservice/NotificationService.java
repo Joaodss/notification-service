@@ -15,6 +15,8 @@ public class NotificationService {
 
     @Autowired
     private MockEmailProxyService mockEmailService;
+
+
     public void createMessage(NotificationRequest notificationRequest) {
         List<String> emails = getEmails(getUsers(notificationRequest.getRecipient()));
         for (String email: emails
